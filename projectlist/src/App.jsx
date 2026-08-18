@@ -1,9 +1,10 @@
-import Outline from './components/Outline';
+import Header from "./components/header/Header";
+
 
 function App() {
   return (
     <>
-      <Outline/>
+      <Header/>
     </>
   );
 }
