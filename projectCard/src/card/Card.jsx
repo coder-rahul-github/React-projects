@@ -1,66 +1,86 @@
 import React, { useState } from "react";
+import tshirt from "../assets/tshirt.jpg";
+import check from "../assets/checkshirt.jpg";
+import coat from "../assets/coat.jpg";
+import babydress from "../assets/baby.jpg";
+import jeans from "../assets/jeans.jpg";
 
 function Card() {
   const [list, setList] = useState([
     {
-      label: "Readeability",
+      label: "T-Shirt",
       id: 1,
-      upvote: 0,
-      downvote: 0,
+      price: 499,
+      quantity: 0,
+      image: tshirt
     },
     {
-      label: "Performance",
+      label: "check Shirt",
       id: 2,
-      upvote: 0,
-      downvote: 0,
+      price: 399,
+      quantity: 0,
+      image:check
     },
     {
-      label: "Security",
+      label: "baby girl",
       id: 3,
-      upvote: 0,
-      downvote: 0,
+      price: 249,
+      quantity: 0,
+      image:babydress
     },
     {
-      label: "Documentation",
+      label: "Coat",
       id: 4,
-      upvote: 0,
-      downvote: 0,
+      price: 999,
+      quantity: 0,
+      image:coat
     },
     {
-      label: "Testing",
+      label: "jeans",
       id: 5,
-      upvote: 0,
-      downvote: 0,
+      price: 799,
+      quantity: 0,
+      image:jeans
     },
   ]);
-  function handleVote(index,key){
+  function handleAdd(index,key){
     list[index][key] +=1
+    setList([...list])
+  }
+  function handleRemove(index,key){
+    list[index] [key] -=1
     setList([...list])
   }
 
   return (
-    <div className="d-flex justify-center flex-wrap">
+    <div className="flex justify-center flex-wrap gap-4 bg-red-100">
       {list.map((aspect, index) => {
         return (
           <div
             key={aspect.id}
-            className="card card border-2 shadow-lg"
-            style={{ width: "16rem" }}
+            className="card card border-2 shadow-lg w-64"
+            
           >
+            <img
+                src ={aspect.image}
+                alt ={aspect.label} className="w-full h-48 object-cover"/>
             <div className="card-body">
-              <h5 className="card-text">{aspect.label}</h5>
+              <h5 className="card-text text-center">{aspect.label}</h5>
+              
+              <p className="card-text fs-6 fw-light">{aspect.price}</p>
+
 
                 <div className="d-flex gap-2">
                     
-                    <button className="btn btn-outline-primary " onClick={()=>handleVote(index,"upvote")}>upvote</button>
-                    <button className="btn btn-outline-danger" onClick={()=>handleVote(index,"downvote")}>downvote</button>
+                    <button className="btn btn-outline-danger" onClick={()=>handleAdd(index,"quantity")}>Add</button>
+                    <button className="btn btn-outline-primary " onClick={()=>handleRemove(index,"quantity")}>remove</button>
                 </div>
                 <div className="flex">
+                    {/* <p className="m-1">
+                    <strong>upvote:</strong>{aspect.}
+                    </p> */}
                     <p className="m-1">
-                    <strong>upvote:</strong>{aspect.upvote}
-                    </p>
-                    <p className="m-1">
-                    <strong>downvote:</strong>{aspect.downvote}
+                    <strong>quantity</strong>{aspect.quantity}
                     </p>
                 </div>
             </div>
