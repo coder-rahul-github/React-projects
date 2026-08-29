@@ -1,7 +1,21 @@
+import { useState } from "react";
 import Expenceform from "./component/Expenceform"
 
 function App() {
-  
+  const [expenses,setExpenses]=useState([]);
+  const[selectedcategory,setSelectedcategory]=useState("All");
+  const [sortorder,setSortorder]=useState("asc");
+  function addExpenses(newExpenses){
+    const expense={
+      id:Date.now(),
+      ...newExpenses
+    };
+    setExpenses((previousExpenses)=>[
+      ...previousExpenses,expense,
+    ]);
+  }
+  //filter expenses
+  const filterexpenses= selectedCategory==="All"?expenses:expenses.filter((expense)=>expenses.category===selectedCategory);
 
   return (
     <>
