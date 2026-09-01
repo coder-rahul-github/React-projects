@@ -1,21 +1,22 @@
 import { useState } from "react";
 import Expenceform from "./component/Expenceform"
+import ExpenseTable from "./component/ExpenseTable";
 
 function App() {
   const [expenses,setExpenses]=useState([]);
   const[selectedCategory,setSelectedCategory]=useState("All");
   const [sortOrder,setSortOrder]=useState("asc");
-  function addExpenses(newExpenses){
+  function addExpense(newExpense){
     const expense={
       id:Date.now(),
-      ...newExpenses
+      ...newExpense
     };
     setExpenses((previousExpenses)=>[
       ...previousExpenses,expense,
     ]);
   }
   //filter expenses
-  const filterExpenses= selectedCategory==="All"?expenses:expenses.filter((expense)=>expenses.category===selectedCategory);
+  const filterExpenses= selectedCategory==="All"?expenses:expenses.filter((expense)=>expense.category===selectedCategory);
   // sort expenses
   const sortingExpenses=[...filterExpenses].sort((a,b)=>{
     if (sortOrder==="asc"){
@@ -25,25 +26,35 @@ function App() {
   });
   //sum total
   const total=expenses.reduce((sum,expense)=>sum+expense.amount,0);
-  
+  //get unique categories
+  const categories=["All",...new Set(expenses.map((expense)=>expense.category))];
+
   return (
     <>
-      <div className="max-w-6xl mx-auto p-10">
-      
-      <h1 className="text-2xl font-bold">
+      <div className="min-h-screen bg-gray-100 px-4 py-10">
+      <div className="mx-auto max-w-6xl">
+        <h1 className="text-2xl font-bold">
        Expence Tracker
       </h1>
-      <div className="grid grid-cols-2 gap-4">
-      <Expenceform />
+      <div className="grid lg:grid-cols-2 gap-8">
+      <Expenceform onAddExpense={addExpense}/>
+      
+      <ExpenseTable
+      expenses={sortingExpenses}
+      categories={categories}
+      selectedCategory={selectedCategory}
+      setSelectedCategory={setSelectedCategory}
+      sortOrder={sortOrder}
+      setSortOrder={setSortOrder}
+      total={total}
+      />
       </div>
-      <div className="flex justify-end items-center">
-        expense table will come here
       </div>
       </div>
       
         
     </>
-  )
+  );
 }
 
 export default App

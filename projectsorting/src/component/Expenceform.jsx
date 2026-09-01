@@ -1,7 +1,7 @@
 import {useState} from 'react'
 
 
-function Expenceform({onAddExpenses}) {
+function Expenceform({onAddExpense}) {
     const [title,setTitle]=useState("");
     const [category,setCategory] =useState("");
     const [amount,setAmount] =useState("");
@@ -15,7 +15,7 @@ function Expenceform({onAddExpenses}) {
             alert("enter amount greater than 0");
             return;
         }
-        onAddExpenses({
+        onAddExpense({
             title:title,
             category:category,
             amount:Number(amount),
@@ -30,7 +30,7 @@ function Expenceform({onAddExpenses}) {
         <>
         <form onSubmit={handleSubmit}
         className='rounded-lg border bg-white p-6 shadow-sm'>    
-        <div className="py-10">
+        <div className="mb-5">
             <label className='mb-2 block font-medium'>
                 Title
             </label>
@@ -38,7 +38,9 @@ function Expenceform({onAddExpenses}) {
             type="text"
             value={title} placeholder="Enter Title"
             onChange={(e)=>setTitle(e.target.value)}
+            
             />
+            </div>
         <div className='mp-5'>
             <label className='mb-2 block font-medium'>
                 Category
@@ -54,9 +56,23 @@ function Expenceform({onAddExpenses}) {
                 <option value="bills">Bills</option>
                 <option value="Travel">Travel</option>
             </select>
-        </div>
+            </div>
+            <div className="mb-6">
+                <label className="mb-2 block font-medium">
+                    Amount
+                </label>
+                <input  className="w-full rounded border border-gray-400 px-3 py-2 outline-none focus:border-black"
+                type="number"
+                value={amount}
+                onChange={(e)=>setAmount(e.target.value)}
+                placeholder="Enter Amount" />
+
+            </div>
+            {/* Add button */}
             
-        </div>
+                <button className="w-full rounded bg-black py-2 text-white transition hover:bg-gray-800"
+                type="submit">Add</button>
+            
         </form>
         </>
         
