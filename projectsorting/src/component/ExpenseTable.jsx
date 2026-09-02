@@ -7,6 +7,7 @@ function ExpenseTable({
     setSelectedCategory,
     sortOrder,
     setSortOrder,
+    total,
 }) {
     function handleSort(){
         if(sortOrder==="asc"){
@@ -18,21 +19,23 @@ function ExpenseTable({
     }
 
     return (
-        <div>
-            <table>
+        <div className="rounded-lg border bg-white shadow-sm">
+            <table className="w-full border-collapse">
                 <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>
-                            <select value={selectedCategory}
+                    <tr className="border-b">
+                        <th className="px-3 py-3 text-left font-semibold">Title</th>
+                        <th className="px-3 py-3 text-left font-semibold">
+                            <select className="bg-transparent outline-none"
+                                value={selectedCategory}
                             onChange={(e)=>setSelectedCategory(e.target.value)}>
                                 {categories.map((category)=>(
                                     <option key={category} value={category}>{category}</option>
                                 ))}
                             </select>
                         </th>
-                        <th>
-                            <button onClick={handleSort}>
+                        <th className="px-3 py-3 text-left font-semibold">
+                            <button onClick={handleSort}
+                                className="flex item-center gap-1">
                                 Amount
                                 <span>
                                     {sortOrder==="asc"?"↑":"↓"}
@@ -45,14 +48,15 @@ function ExpenseTable({
                     {expenses.length===0 ?(
                         <tr>
                             <td colspan="3"
-                            className='text-center'
+                            className='text-center px-3 py-3 text-center text-gray-500'
                             >
                                 no expense found
                             </td>
                         </tr>
                     ):(
                         expenses.map((expense)=>(
-                            <tr key={expense.id}>
+                            <tr key={expense.id}
+                                className="border-b last:border-b-0">
                                 <td className='px-3 py-3'>
                                     {expense.title}
                                 </td>
@@ -66,6 +70,16 @@ function ExpenseTable({
                         ))
                     )}
                 </tbody>
+                <tfoot>
+                    <tr className="font-bold">
+                        <td>
+                            <td></td>
+                            <td className=' px-5 py-5 '>
+                                ₹{total}
+                            </td>
+                        </td>
+                    </tr>
+                </tfoot>
             </table>
         </div>
     )
