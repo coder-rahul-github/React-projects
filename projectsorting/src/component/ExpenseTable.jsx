@@ -8,6 +8,7 @@ function ExpenseTable({
     sortOrder,
     setSortOrder,
     total,
+    OnDeleteExpenses,
 }) {
     function handleSort(){
         if(sortOrder==="asc"){
@@ -42,13 +43,16 @@ function ExpenseTable({
                                 </span>
                             </button>
                         </th>
+                        <th className='px-3 py-3 text-left font-semibold'>
+                            Action
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
                     {expenses.length===0 ?(
                         <tr>
-                            <td colspan="3"
-                            className='text-center px-3 py-3 text-center text-gray-500'
+                            <td colSpan="4"
+                            className='text-center px-3 py-3 text-gray-500'
                             >
                                 no expense found
                             </td>
@@ -66,18 +70,24 @@ function ExpenseTable({
                                 <td className='px-3 py-3'>
                                     {expense.amount}
                                 </td>
+                                <td className='px-3 py-3'>
+                                    <button onClick={()=>OnDeleteExpenses(expense.id)}
+                                        className='rounded bg-red-500 px-3 py-1 text-white hover:bg-red-800'>
+                                        Delete
+                                    </button>
+                                </td>
                             </tr>
                         ))
                     )}
                 </tbody>
                 <tfoot>
                     <tr className="font-bold">
-                        <td>
+                        
                             <td></td>
                             <td className=' px-5 py-5 '>
                                 ₹{total}
                             </td>
-                        </td>
+                    
                     </tr>
                 </tfoot>
             </table>

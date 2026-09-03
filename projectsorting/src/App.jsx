@@ -15,6 +15,9 @@ function App() {
       ...previousExpenses,expense,
     ]);
   }
+  function deleteExpense(id){
+    setExpenses((previousExpenses)=>previousExpenses.filter((expense)=>expense.id!==id));
+  }
   //filter expenses
   const filterExpenses= selectedCategory==="All"?expenses:expenses.filter((expense)=>expense.category===selectedCategory);
   // sort expenses
@@ -47,6 +50,7 @@ function App() {
       sortOrder={sortOrder}
       setSortOrder={setSortOrder}
       total={total}
+      onDeleteExpense={deleteExpense}
       />
       </div>
       </div>
