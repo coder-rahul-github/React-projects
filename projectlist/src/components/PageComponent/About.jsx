@@ -4,7 +4,7 @@ import todo_icon from '../../assets/todo_icon.png'
 
 function About() {
     return (
-    <div className='bg-white place-self-center w-11/12 max-w-md p-7 mt-5 flex flex-col min-h-[550px] rounded'>
+    <div className='bg-white place-self-center w-11/12 max-w-md p-7 mt-5 flex flex-col min-h-550px rounded'>
         <div className='flex items-center gap-2'>
             <img className='w-8' src={todo_icon} alt="" />
             <p className='text-3xl font-semibold'>To-do List</p>
