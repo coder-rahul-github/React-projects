@@ -1,16 +1,16 @@
 import React from 'react'
 import { useState, useEffect } from "react";
+import {Link} from 'react-router';
 
 function Navbar() {
 
     const NAV_LINKS = [
-    { label: "Home", href: "#home" },
-    { label: "Order", href: "#order" },
-    { label: "Wishlist", href: "#wishlist" },
-    { label: "About", href: "#about" },
+    { label: "Menu", href: "/menu" },
+    { label: "Order", href: "/order" },
+    { label: "Wishlist", href: "/wishlist" },
+    { label: "About", href: "/about" },
     ];
 
-    export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [isDark, setIsDark] = useState(false);
 
@@ -35,15 +35,16 @@ function Navbar() {
             </a>
 
             {/* Desktop Menu */}
+            {/* <li><a href="">HOME</a></li> */}
             <ul className="hidden md:flex gap-6">
             {NAV_LINKS.map((link) => (
                 <li key={link.label}>
-                <a
-                    href={link.href}
+                <Link 
+                    to={link.href}
                     className="text-slate-600 hover:text-blue-600 dark:text-slate-200"
                 >
                     {link.label}
-                </a>
+                </Link>
                 </li>
             ))}
             </ul>
@@ -89,9 +90,6 @@ function Navbar() {
         </header>
     );
     }
-
-
-}
     
 
 export default Navbar
