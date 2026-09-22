@@ -6,8 +6,14 @@ import Wishlist from "./component/Wishlist"
 import About from "./component/About"
 import Order from "./component/Order"
 import OrderPopup from "./component/OrderPopup"
+import Footer from "./component/Footer"
+import AdminDashboard from "./component/AdminDashboard"
+import AdminLogin from "./component/AdminLogin"
 
 function App() {
+  // Admin auth state (session-only, resets on page refresh)
+  const [isAdminAuth, setIsAdminAuth] = useState(false)
+
   // Wishlist state
   const [wishlist, setWishlist] = useState([])
 
@@ -55,47 +61,68 @@ function App() {
         0
       ),
       placedAt: new Date().toLocaleString(),
+      status: "Packing", // default status for new orders
     }
 
     setOrders((prev) => [...prev, newOrder])
     setCart({}) // clears cart → popup auto-hides (returns null when cart empty)
   }
 
+  // Admin: update order status
+  function updateOrderStatus(orderId, newStatus) {
+    setOrders((prev) =>
+      prev.map((o) => (o.id === orderId ? { ...o, status: newStatus } : o))
+    )
+  }
+
   return (
-    <div>
+    <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
       <Navbar />
-      <Routes>
-        <Route
-          path="menu"
-          element={
-            <Home
-              wishlist={wishlist}
-              toggleWishlist={toggleWishlist}
-              cart={cart}
-              updateCart={updateCart}
-            />
-          }
-        />
-        <Route
-          path="order"
-          element={<Order orders={orders} />}
-        />
-        <Route
-          path="wishlist"
-          element={
-            <Wishlist
-              wishlist={wishlist}
-              toggleWishlist={toggleWishlist}
-              cart={cart}
-              updateCart={updateCart}
-            />
-          }
-        />
-        <Route path="about" element={<About />} />
-      </Routes>
+      <div style={{ flex: 1 }}>
+        <Routes>
+          <Route
+            path="menu"
+            element={
+              <Home
+                wishlist={wishlist}
+                toggleWishlist={toggleWishlist}
+                cart={cart}
+                updateCart={updateCart}
+              />
+            }
+          />
+          <Route
+            path="order"
+            element={<Order orders={orders} />}
+          />
+          <Route
+            path="wishlist"
+            element={
+              <Wishlist
+                wishlist={wishlist}
+                toggleWishlist={toggleWishlist}
+                cart={cart}
+                updateCart={updateCart}
+              />
+            }
+          />
+          <Route path="about" element={<About />} />
+          <Route
+            path="admin"
+            element={
+              isAdminAuth
+                ? <AdminDashboard orders={orders} updateOrderStatus={updateOrderStatus} onLogout={() => setIsAdminAuth(false)} />
+                : <AdminLogin onSuccess={() => setIsAdminAuth(true)} />
+            }
+          />
+        </Routes>
+      </div>
 
       {/* Floating popup — placeOrder clears cart so popup disappears after order */}
       <OrderPopup cart={cart} placeOrder={placeOrder} />
+
+      {/* Footer with admin link */}
+      <Footer />
     </div>
   )
 }
