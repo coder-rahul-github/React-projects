@@ -12,7 +12,7 @@ function ProductCard({ product, wishlist = [], toggleWishlist, cart = {}, update
     return (
         <div className='w-full'>
             <div className='relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-50'>
-            <img className='h-64 w-full object-contain'
+            <img className='h-32 w-full object-contain'
                 src={product.Image}
                 alt={product.name}/>
 

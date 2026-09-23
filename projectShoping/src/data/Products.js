@@ -37,6 +37,36 @@ const Products=[{
     oldPrice:"1499",
     brand:["HIKVISION"]
 
+},
+{
+    id:4,
+    name:"HP Chromebook 14, MediaTek Kompanio 540 (4GB LPDDR5, 128GB UFS) ",
+    Image:"/hpcromebook.jpg",
+    tags:["electronics"],
+    price:"25000",
+    oldPrice:"32000",
+    brand:["HP"]
+
+},
+{
+    id:4,
+    name:"OnePlus Watch 2R with Wear OS 4 ",
+    Image:"/onepluswatch.png",
+    tags:["electronics"],
+    price:"13999",
+    oldPrice:"19999",
+    brand:["OnePlus"]
+
+},
+{
+    id:4,
+    name:"boAt Smartchoice Aavante 2.1",
+    Image:"/boAtspeaker.jpg",
+    tags:["electronics"],
+    price:"6999",
+    oldPrice:"21999",
+    brand:["boAt"]
+
 }
 ];
 
