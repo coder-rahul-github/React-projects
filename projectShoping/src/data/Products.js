@@ -112,6 +112,96 @@ const Products = [{
     price: "40990",
     oldPrice: "45000",
     brand: ["GoPro"]
+},
+{
+    id: 13,
+    name: "JBL Flip 6 Portable Bluetooth Speaker",
+    Image: "/jblflip6.png",
+    tags: ["electronics", "audio"],
+    price: "9999",
+    oldPrice: "13999",
+    brand: ["JBL"]
+},
+{
+    id: 14,
+    name: "Sony WH-1000XM5 Wireless Headphones",
+    Image: "/sonywh1000xm5.png",
+    tags: ["electronics", "audio"],
+    price: "29990",
+    oldPrice: "34990",
+    brand: ["Sony"]
+},
+{
+    id: 15,
+    name: "Apple iPad Air (5th Gen)",
+    Image: "/ipadair.png",
+    tags: ["electronics", "tablets"],
+    price: "59900",
+    oldPrice: "69900",
+    brand: ["Apple"]
+},
+{
+    id: 16,
+    name: "LG 34-inch UltraWide Monitor",
+    Image: "/lgmonitor.png",
+    tags: ["electronics", "displays"],
+    price: "32000",
+    oldPrice: "40000",
+    brand: ["LG"]
+},
+{
+    id: 17,
+    name: "Logitech G Pro X Superlight Mouse",
+    Image: "/logitechmouse.png",
+    tags: ["electronics", "peripherals"],
+    price: "12995",
+    oldPrice: "14500",
+    brand: ["Logitech"]
+},
+{
+    id: 18,
+    name: "Keychron K2 Wireless Mechanical Keyboard",
+    Image: "/keychronk2.png",
+    tags: ["electronics", "peripherals"],
+    price: "8499",
+    oldPrice: "11000",
+    brand: ["Keychron"]
+},
+{
+    id: 19,
+    name: "Canon EOS R5 Mirrorless Camera",
+    Image: "/canonr5.png",
+    tags: ["electronics", "cameras"],
+    price: "319990",
+    oldPrice: "359990",
+    brand: ["Canon"]
+},
+{
+    id: 20,
+    name: "Microsoft Xbox Series X",
+    Image: "/xboxseriesx.png",
+    tags: ["electronics", "gaming"],
+    price: "49990",
+    oldPrice: "55990",
+    brand: ["Microsoft"]
+},
+{
+    id: 21,
+    name: "Dell XPS 15 Laptop",
+    Image: "/dellxps15.png",
+    tags: ["electronics", "laptops"],
+    price: "185000",
+    oldPrice: "210000",
+    brand: ["Dell"]
+},
+{
+    id: 22,
+    name: "Samsung Galaxy S24 Ultra",
+    Image: "/s24ultra.png",
+    tags: ["electronics", "smartphones"],
+    price: "129999",
+    oldPrice: "134999",
+    brand: ["Samsung"]
 }
 ];
 
