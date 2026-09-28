@@ -12,7 +12,7 @@ function Navbar() {
     return (
         <header className='bg-white'>
 
-        <nav className='flex justify-between items-center w-[60%]'>
+        <nav className='flex justify-between items-center  w-[60%]'>
             <div className='m-2'>
                 <img className='w-16' src="./LSlogo.png" alt='logo' />
             </div>

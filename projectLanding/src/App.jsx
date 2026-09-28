@@ -9,8 +9,10 @@ function App() {
   
 
   return (
-    <div className="font-[poppins] bg-gray-800 h-screen">
-      
+    <div className="font-[poppings] h-screen bg-cover bg-center
+    bg-no-repeat"
+    style={{backgroundImage:"URL('/windowbg.jpg')"}}>
+       
       <Navbar/>
       <Routes>
         <Route path="/Home" element={<Home/>}/>
