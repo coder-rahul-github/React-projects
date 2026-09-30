@@ -202,6 +202,51 @@ const Products = [{
     price: "129999",
     oldPrice: "134999",
     brand: ["Samsung"]
+},
+{
+    id: 23,
+    name: "boAt Rockerz 450 Bluetooth On Ear Headphones",
+    Image: "/boat_headphones.png",
+    tags: ["electronics", "audio"],
+    price: "1499",
+    oldPrice: "3990",
+    brand: ["boAt"]
+},
+{
+    id: 24,
+    name: "Apple iPhone 15 (128 GB)",
+    Image: "/iphone15.png",
+    tags: ["electronics", "smartphones"],
+    price: "79900",
+    oldPrice: "89900",
+    brand: ["Apple"]
+},
+{
+    id: 25,
+    name: "Samsung Galaxy Tab S9",
+    Image: "/samsung_tab_s9.png",
+    tags: ["electronics", "tablets"],
+    price: "72999",
+    oldPrice: "83999",
+    brand: ["Samsung"]
+},
+{
+    id: 26,
+    name: "Acer Nitro 5 Gaming Laptop",
+    Image: "/acer_nitro_5.png",
+    tags: ["electronics", "laptops", "gaming"],
+    price: "69990",
+    oldPrice: "89990",
+    brand: ["Acer"]
+},
+{
+    id: 27,
+    name: "Noise ColorFit Pro 4 Smartwatch",
+    Image: "/noise_colorfit.png",
+    tags: ["electronics", "wearables"],
+    price: "2499",
+    oldPrice: "5999",
+    brand: ["Noise"]
 }
 ];
 
