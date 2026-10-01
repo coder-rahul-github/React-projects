@@ -247,6 +247,51 @@ const Products = [{
     price: "2499",
     oldPrice: "5999",
     brand: ["Noise"]
+},
+{
+    id: 28,
+    name: "WD 2TB Elements Portable External Hard Drive",
+    Image: "/wd_2tb.jpg",
+    tags: ["electronics", "storage"],
+    price: "5299",
+    oldPrice: "6499",
+    brand: ["WD"]
+},
+{
+    id: 29,
+    name: "SanDisk SSD PLUS 1TB Internal SSD",
+    Image: "/sandisk_1tb.jpg",
+    tags: ["electronics", "storage"],
+    price: "8599",
+    oldPrice: "10999",
+    brand: ["SanDisk"]
+},
+{
+    id: 30,
+    name: "Silicon Power 256GB SSD",
+    Image: "/sp_256gb.jpg",
+    tags: ["electronics", "storage"],
+    price: "2499",
+    oldPrice: "3499",
+    brand: ["Silicon Power"]
+},
+{
+    id: 31,
+    name: "WD 4TB Gaming Drive",
+    Image: "/wd_4tb.jpg",
+    tags: ["electronics", "storage", "gaming"],
+    price: "8999",
+    oldPrice: "11999",
+    brand: ["WD"]
+},
+{
+    id: 32,
+    name: "Acer SB220Q bi 21.5 inches Full HD IPS Monitor",
+    Image: "/acer_monitor.jpg",
+    tags: ["electronics", "monitor"],
+    price: "12999",
+    oldPrice: "15999",
+    brand: ["Acer"]
 }
 ];
 
