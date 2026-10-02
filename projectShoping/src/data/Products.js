@@ -292,6 +292,51 @@ const Products = [{
     price: "12999",
     oldPrice: "15999",
     brand: ["Acer"]
+},
+{
+    id: 33,
+    name: "Apple iPhone 15 Pro Max (256 GB)",
+    Image: "/iphone15promax.jpg",
+    tags: ["electronics", "smartphones"],
+    price: "159900",
+    oldPrice: "169900",
+    brand: ["Apple"]
+},
+{
+    id: 34,
+    name: "Samsung Odyssey G9 49-inch Curved Monitor",
+    Image: "/odysseyg9.jpg",
+    tags: ["electronics", "monitor", "gaming"],
+    price: "135000",
+    oldPrice: "150000",
+    brand: ["Samsung"]
+},
+{
+    id: 35,
+    name: "Sony Alpha 7 IV Full-frame Mirrorless Camera",
+    Image: "/sonya7iv.jpg",
+    tags: ["electronics", "cameras"],
+    price: "242990",
+    oldPrice: "262990",
+    brand: ["Sony"]
+},
+{
+    id: 36,
+    name: "ASUS ROG Zephyrus G14 Gaming Laptop",
+    Image: "/rogzephyrus.jpg",
+    tags: ["electronics", "laptops", "gaming"],
+    price: "149990",
+    oldPrice: "169990",
+    brand: ["ASUS"]
+},
+{
+    id: 37,
+    name: "Razer DeathAdder V3 Pro Wireless Gaming Mouse",
+    Image: "/deathadderv3.jpg",
+    tags: ["electronics", "peripherals", "gaming"],
+    price: "12999",
+    oldPrice: "14999",
+    brand: ["Razer"]
 }
 ];
 
