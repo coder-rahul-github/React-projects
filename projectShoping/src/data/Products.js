@@ -337,6 +337,51 @@ const Products = [{
     price: "12999",
     oldPrice: "14999",
     brand: ["Razer"]
+},
+{
+    id: 38,
+    name: "Sony A80J OLED TV",
+    Image: "/tv.jpg",
+    tags: ["electronics", "tv"],
+    price: "149990",
+    oldPrice: "179990",
+    brand: ["Sony"]
+},
+{
+    id: 39,
+    name: "Bose QuietComfort 45 Headphones",
+    Image: "/boseqc45.png",
+    tags: ["electronics", "audio"],
+    price: "24990",
+    oldPrice: "29990",
+    brand: ["Bose"]
+},
+{
+    id: 40,
+    name: "Garmin Forerunner 945",
+    Image: "/garmin945.png",
+    tags: ["electronics", "wearables", "fitness"],
+    price: "49990",
+    oldPrice: "54990",
+    brand: ["Garmin"]
+},
+{
+    id: 41,
+    name: "Kindle Paperwhite (11th Gen)",
+    Image: "/kindle.png",
+    tags: ["electronics", "e-reader"],
+    price: "13999",
+    oldPrice: "14999",
+    brand: ["Amazon"]
+},
+{
+    id: 42,
+    name: "Dyson V11 Absolute Pro",
+    Image: "/dyson.png",
+    tags: ["electronics", "home appliances"],
+    price: "44900",
+    oldPrice: "54900",
+    brand: ["Dyson"]
 }
 ];
 
