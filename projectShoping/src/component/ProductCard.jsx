@@ -11,7 +11,7 @@ function ProductCard({ product, wishlist = [], toggleWishlist, cart = {}, update
 
     return (
         <div className='w-full'>
-            <div className='relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-50'>
+            <div className='relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800'>
             <img className='h-32 w-full object-contain'
                 src={product.Image}
                 alt={product.name}/>
@@ -41,11 +41,11 @@ function ProductCard({ product, wishlist = [], toggleWishlist, cart = {}, update
             </div>
 
             <div className='mt-4 flex-item-center gap-3'>
-                <span className='text-4xl font-bold'>₹{product.price}</span>
+                <span className='text-4xl font-bold text-slate-900 dark:text-slate-100'>₹{product.price}</span>
                 <span className='text-xl text-slate-500 line-through'>₹{product.oldPrice}</span>
             </div>
 
-            <h2 className='mt-2 text-2xl font-semibold leading-tight'>{product.name}</h2>
+            <h2 className='mt-2 text-2xl font-semibold leading-tight text-slate-900 dark:text-slate-100'>{product.name}</h2>
 
             <div className='mt-4 flex flex-wrap gap-2'>
                 {product.tags.map((tag) => (

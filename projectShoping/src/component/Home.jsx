@@ -37,9 +37,9 @@ function Home({ wishlist, toggleWishlist, cart, updateCart }) {
     });
 
     return (
-        <div className='min-h-screen bg-gray-50 flex flex-col md:flex-row px-4 py-6 gap-6'>
+        <div className='min-h-screen bg-gray-50 dark:bg-slate-900 flex flex-col md:flex-row px-4 py-6 gap-6'>
             {/* Sidebar */}
-            <aside className='w-full md:w-64 flex-shrink-0 bg-white p-5 rounded-xl shadow-sm border border-gray-100 h-fit'>
+            <aside className='w-full md:w-64 flex-shrink-0 bg-white dark:bg-slate-800 p-5 rounded-xl shadow-sm border border-gray-100 dark:border-slate-700 h-fit'>
                 <h2 className='text-xl font-bold mb-4 text-gray-800'>Filters</h2>
                 
                 {/* Search */}
@@ -55,10 +55,10 @@ function Home({ wishlist, toggleWishlist, cart, updateCart }) {
 
                 {/* Categories */}
                 <div className='mb-6'>
-                    <h3 className='font-semibold text-gray-700 mb-3 border-b pb-2'>Categories</h3>
+                    <h3 className='font-semibold text-gray-700 dark:text-slate-200 mb-3 border-b dark:border-slate-600 pb-2'>Categories</h3>
                     <div className='flex flex-col gap-2 max-h-48 overflow-y-auto pr-2 custom-scrollbar'>
                         {allCategories.map(category => (
-                            <label key={category} className='flex items-center gap-2 text-sm text-gray-600 cursor-pointer hover:text-blue-600 transition-colors'>
+                            <label key={category} className='flex items-center gap-2 text-sm text-gray-600 dark:text-slate-300 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 transition-colors'>
                                 <input 
                                     type="checkbox" 
                                     checked={selectedCategories.includes(category)}
@@ -73,10 +73,10 @@ function Home({ wishlist, toggleWishlist, cart, updateCart }) {
 
                 {/* Brands */}
                 <div>
-                    <h3 className='font-semibold text-gray-700 mb-3 border-b pb-2'>Brands</h3>
+                    <h3 className='font-semibold text-gray-700 dark:text-slate-200 mb-3 border-b dark:border-slate-600 pb-2'>Brands</h3>
                     <div className='flex flex-col gap-2 max-h-48 overflow-y-auto pr-2 custom-scrollbar'>
                         {allBrands.map(brand => (
-                            <label key={brand} className='flex items-center gap-2 text-sm text-gray-600 cursor-pointer hover:text-blue-600 transition-colors'>
+                            <label key={brand} className='flex items-center gap-2 text-sm text-gray-600 dark:text-slate-300 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 transition-colors'>
                                 <input 
                                     type="checkbox" 
                                     checked={selectedBrands.includes(brand)}
@@ -92,7 +92,7 @@ function Home({ wishlist, toggleWishlist, cart, updateCart }) {
 
             {/* Product Grid */}
             <div className='flex-1'>
-                <div className='mb-4 text-gray-600 text-sm font-medium'>
+                <div className='mb-4 text-gray-600 dark:text-slate-400 text-sm font-medium'>
                     Showing {filteredProducts.length} product(s)
                 </div>
                 {filteredProducts.length === 0 ? (

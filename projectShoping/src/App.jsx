@@ -76,7 +76,7 @@ function App() {
   }
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+    <div className="dark:bg-slate-900 dark:text-white" style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
       <Navbar />
       <div style={{ flex: 1 }}>
         <Routes>
