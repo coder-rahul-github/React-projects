@@ -382,6 +382,51 @@ const Products = [{
     price: "44900",
     oldPrice: "54900",
     brand: ["Dyson"]
+},
+{
+    id: 43,
+    name: "Sony WF-1000XM5 True Wireless Earbuds",
+    Image: "/sony_wf1000xm5.png",
+    tags: ["electronics", "earbuds"],
+    price: "19990",
+    oldPrice: "24990",
+    brand: ["Sony"]
+},
+{
+    id: 44,
+    name: "Samsung Galaxy Buds 2 Pro",
+    Image: "/samsung_buds2pro.png",
+    tags: ["electronics", "earbuds"],
+    price: "11999",
+    oldPrice: "17999",
+    brand: ["Samsung"]
+},
+{
+    id: 45,
+    name: "Apple AirPods Pro 2nd Gen",
+    Image: "/airpods_pro2.png",
+    tags: ["electronics", "earbuds"],
+    price: "20900",
+    oldPrice: "26900",
+    brand: ["Apple"]
+},
+{
+    id: 46,
+    name: "boAt Airdopes 441 TWS Earbuds",
+    Image: "/boat_airdopes441.png",
+    tags: ["electronics", "earbuds"],
+    price: "1299",
+    oldPrice: "2990",
+    brand: ["boAt"]
+},
+{
+    id: 47,
+    name: "JBL Tune 230NC TWS Earbuds",
+    Image: "/jbl_tune230nc.png",
+    tags: ["electronics", "earbuds"],
+    price: "3999",
+    oldPrice: "7999",
+    brand: ["JBL"]
 }
 ];
 
