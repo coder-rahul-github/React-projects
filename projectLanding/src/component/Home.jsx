@@ -15,6 +15,8 @@ function Home() {
                 </div>
                 
             </div>
+            <div className='bg-yellow-600 size-fit'>tailwindcss</div>
+            <div className='gradient bg-gradient-to-tr from-red-500 to-blue-500 size-84' >tailwindcss</div>
         </div>
     )
 }
