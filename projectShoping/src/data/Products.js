@@ -427,6 +427,51 @@ const Products = [{
     price: "3999",
     oldPrice: "7999",
     brand: ["JBL"]
+},
+{
+    id: 48,
+    name: "Google Pixel 8 Pro (128 GB)",
+    Image: "/pixel8pro.jpg",
+    tags: ["electronics", "smartphones"],
+    price: "84999",
+    oldPrice: "106999",
+    brand: ["Google"]
+},
+{
+    id: 49,
+    name: "Marshall Stanmore III Bluetooth Speaker",
+    Image: "/marshall_stanmore3.jpg",
+    tags: ["electronics", "audio"],
+    price: "36999",
+    oldPrice: "44999",
+    brand: ["Marshall"]
+},
+{
+    id: 50,
+    name: "Xiaomi Pad 6 (128 GB, Wi-Fi)",
+    Image: "/xiaomi_pad6.jpg",
+    tags: ["electronics", "tablets"],
+    price: "26999",
+    oldPrice: "32999",
+    brand: ["Xiaomi"]
+},
+{
+    id: 51,
+    name: "Corsair K100 RGB Mechanical Gaming Keyboard",
+    Image: "/corsair_k100.jpg",
+    tags: ["electronics", "peripherals", "gaming"],
+    price: "21999",
+    oldPrice: "24999",
+    brand: ["Corsair"]
+},
+{
+    id: 52,
+    name: "Apple Watch Ultra 2 (49mm, GPS + Cellular)",
+    Image: "/apple_watch_ultra2.jpg",
+    tags: ["electronics", "wearables"],
+    price: "89900",
+    oldPrice: "99900",
+    brand: ["Apple"]
 }
 ];
 
